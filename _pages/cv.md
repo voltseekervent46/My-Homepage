@@ -3,7 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
+redirect_from: 
   - /resume
 ---
 
@@ -61,4 +61,5 @@ Teaching
   
 Service and leadership
 ======
+* Reviewer for LCFM 2025 (Long Context Foundation Models)
 * Currently signed in to 43 different slack teams
