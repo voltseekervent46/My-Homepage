@@ -42,6 +42,28 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+        {%- assign has_any_link = page.paperurl or page.slidesurl or page.bibtexurl or page.codeurl -%}
+
+        {%- if page.citation -%}
+          <p style="font-size: smaller">
+            Recommended citation: {{ page.citation }}
+            {%- if has_any_link -%}<br/>{%- endif -%}
+            {%- assign first = true -%}
+            {%- if page.paperurl -%}{% unless first %} | {% endunless %}<a href="{{ page.paperurl }}">Download Paper</a>{% assign first = false %}{%- endif -%}
+            {%- if page.slidesurl -%}{% unless first %} | {% endunless %}<a href="{{ page.slidesurl }}">Download Slides</a>{% assign first = false %}{%- endif -%}
+            {%- if page.bibtexurl -%}{% unless first %} | {% endunless %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% assign first = false %}{%- endif -%}
+            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code (GitHub)</a>{% assign first = false %}{%- endif -%}
+          </p>
+        {%- elsif has_any_link -%}
+          <p style="font-size: smaller">
+            {%- assign first = true -%}
+            {%- if page.paperurl -%}{% unless first %} | {% endunless %}<a href="{{ page.paperurl }}">Download Paper</a>{% assign first = false %}{%- endif -%}
+            {%- if page.slidesurl -%}{% unless first %} | {% endunless %}<a href="{{ page.slidesurl }}">Download Slides</a>{% assign first = false %}{%- endif -%}
+            {%- if page.bibtexurl -%}{% unless first %} | {% endunless %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% assign first = false %}{%- endif -%}
+            {%- if page.codeurl -%}{% unless first %} | {% endunless %}<a href="{{ page.codeurl }}" target="_blank" rel="noopener">Code (GitHub)</a>{% assign first = false %}{%- endif -%}
+          </p>
+        {%- endif -%}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
