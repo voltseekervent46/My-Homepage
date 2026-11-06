@@ -70,7 +70,8 @@
       "publisher": "COML 2025",
       "releaseDate": "2025-06-01",
       "website": "https://doi.org/10.5281/zenodo.16698207",
-      "summary": "Ipsum Lorem is all you need"
+      "summary": "Ipsum Lorem is all you need",
+      "code": "https://github.com/voltseekervent46/ipsum-lorem-all-you-need"
     },
     {
       "name": "Paper Title Number 1",
@@ -107,7 +108,8 @@
       "event": "COML 2025",
       "date": "2026-01-25",
       "location": "Vancouver, Canada",
-      "description": "Oral Presentation"
+      "description": "Oral Presentation",
+      "code": "https://github.com/voltseekervent46/ipsum-lorem-all-you-need"
     },
     {
       "name": "Talk 1 on Relevant Topic in Your Field",
